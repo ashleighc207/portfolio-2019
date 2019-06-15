@@ -109,10 +109,7 @@ gulp.task('ejs', function(){
    .pipe(gulp.dest('build/html'))
 });
 
-gulp.task('serve', run('live-server --host=localhost --port=8000'))
-
-
 gulp.task('run', ['html', 'css', 'js', 'ejs', 'unusedCss']);
 
-gulp.task('default', ['run', 'serve', 'watch']);
+gulp.task('default', ['run', 'watch']);
 
