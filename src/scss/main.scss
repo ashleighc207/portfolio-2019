@@ -4,6 +4,7 @@ $secondary-dark: #1F2833;
 $primary-gray: #C5C6C7;
 $primary-blue: #334480;
 $secondary-blue: #8C99C6;
+$white: #ffffff;
 
 
 * {
@@ -89,25 +90,44 @@ a:hover {
 	max-height: 100%;
 }
 
-.project-link {
-	position: absolute;
-	top: calc(50% - 40px);
-	left: calc(50% - 60px);
+.project-link i {
+	font-size: 40px;
+	color: $white;
 }
 
-.project-link i {
-	font-size: 60px;
+.project-link {
+	border: 3px solid $white;
+	border-radius: 50%;
+	display: flex;
+	margin: 10px;
+}
+
+.project-link:hover {
+	text-decoration: none;
 }
 
 .project-links {
 	display: none;
-	background-color: $secondary-blue;
-	opacity: .5;
+	transition: 2s;
+	background-color: transparent;
+}
+
+.project-tile:hover .project-links {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: $primary-blue;
+	opacity: .7;
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
+	color: $white;
 }
 
-
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
