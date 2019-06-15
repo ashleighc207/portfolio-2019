@@ -12,6 +12,25 @@
   },
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.1.5",
+    "browser-sync": "^2.26.3",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.4",
+    "gulp": "^3.9.1",
+    "gulp-check-unused-css": "^2.1.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-deporder": "^1.1.0",
+    "gulp-ejs": "^3.2.0",
+    "gulp-htmlclean": "^2.7.22",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-strip-debug": "^3.0.0",
+    "gulp-uglify": "^3.0.1",
+    "postcss-assets": "^5.0.0"
+  },
   "bugs": {
     "url": "https://github.com/ashleighc207/portfolio-2019/issues"
   },
