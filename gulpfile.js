@@ -14,6 +14,7 @@ let gulp = require('gulp'),
 	cssnano = require('cssnano'),
 	ejs = require('gulp-ejs'),
   checkCSS = require('gulp-check-unused-css'),
+  run = require('gulp-run-command').default,
 	devBuild = (process.env.NODE_ENV !== 'production'),
   	folder = {
 	    src: 'src/',
@@ -24,8 +25,8 @@ let gulp = require('gulp'),
 
 
 gulp.task('images', function() {
-  let out = folder.build + 'imgs/';
-  return gulp.src(folder.src + 'imgs/**/*')
+  let out = folder.build + 'images/';
+  return gulp.src(folder.src + 'images/**/*')
     .pipe(newer(out))
     .pipe(imagemin({ optimizationLevel: 5 }))
     .pipe(gulp.dest(out));
@@ -60,7 +61,7 @@ gulp.task('js', function() {
 
 gulp.task('css', ['images'], function() {
 	let postCssOpts = [
-  assets({ loadPaths: ['imgs/'] }),
+  assets({ loadPaths: ['images/'] }),
   autoprefixer({ browsers: ['last 2 versions', '> 2%'] }),
   mqpacker
   ];
@@ -72,7 +73,7 @@ gulp.task('css', ['images'], function() {
   return gulp.src(folder.src + 'scss/main.scss')
     .pipe(sass({
       outputStyle: 'nested',
-      imagePath: 'imgs/',
+      imagePath: 'images/',
       precision: 3,
       errLogToConsole: true
     }))
@@ -90,7 +91,7 @@ gulp.task('unusedCss', ['images'], function() {
 
 gulp.task('watch', function() {
 
-  gulp.watch(folder.src + 'imgs/**/*', ['images']);
+  gulp.watch(folder.src + 'images/**/*', ['images']);
 
   gulp.watch(folder.src + 'html/**/*', ['html']);
 
@@ -108,7 +109,10 @@ gulp.task('ejs', function(){
    .pipe(gulp.dest('build/html'))
 });
 
+gulp.task('serve', run('live-server --host=localhost --port=8000'))
+
+
 gulp.task('run', ['html', 'css', 'js', 'ejs', 'unusedCss']);
 
-gulp.task('default', ['run', 'watch']);
+gulp.task('default', ['run', 'serve', 'watch']);
 
