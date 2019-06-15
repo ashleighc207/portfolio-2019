@@ -2,22 +2,114 @@
 <html>
 <head>
 	<title>Ashleigh.io</title>
-	<link rel="stylesheet" type="text/css" href="./css/styles.css">
-	<script type="text/javascript" src="./js/index.js"></script>
+	<link rel="stylesheet" type="text/css" href="build/css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
 	<header>
-		<nav>
-			<img src="build/images/ac-logo.png">
-			<ul>
-				<li>Home</li>
-				<li>About</li>
-				<li>Projects</li>
+		<nav class="main-navigation">
+			<!-- <img src="build/images/ac-logo.png" class="logo"> -->
+			<ul class="main-navigation-links">
+				<li class="nav-link"><a href="#home">Home</a></li>
+				<li class="nav-link"><a href="#projects">Projects</a></li>
+				<li class="nav-link"><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
 	</header>
 	<main>
-		<section>
+		<section class="main-jumbotron">
+		</section>
+		<section class="main-jumbotron-overlay" id="home">
+			<p class="jumbotron-heading">Welcome! Scroll Down to see my work</p>
+		</section>
+		<section id="projects" class="project-container">
+			<div class="project-tile">
+				<img src="./src/images/arcade.png">
+				<div class="project-links">
+					<a href="#" class="project-link"><i class="material-icons">link</i><i class="material-icons">unfold_more</i></a>
+				</div>
+			</div>
+			<div class="project-tile">
+				<img src="./src/images/colorgame.png">
+				<div class="project-links">
+					<a href="#" class="project-link">
+						<i class="material-icons">link</i>
+					</a>
+					<a href="#" class="project-link">
+						<i class="material-icons">unfold_more</i>
+					</a>
+				</div>
+			</div>
+			<div class="project-tile">
+				<img src="./src/images/my-reads-react-app.png">
+				<div class="project-links">
+					<a href="#" class="project-link">
+						<i class="material-icons">link</i>
+					</a>
+					<a href="#" class="project-link">
+						<i class="material-icons">unfold_more</i>
+					</a>
+				</div>
+			</div>
+			<div class="project-tile">
+				<img src="./src/images/pixel.png">
+				<div class="project-links">
+					<a href="#" class="project-link">
+						<i class="material-icons">link</i>
+					</a>
+					<a href="#" class="project-link">
+						<i class="material-icons">unfold_more</i>
+					</a>
+				</div>
+			</div>
+			<div class="project-tile">
+				<img src="./src/images/todo.png">
+				<div class="project-links">
+					<a href="#" class="project-link">
+						<i class="material-icons">link</i>
+					</a>
+					<a href="#" class="project-link">
+						<i class="material-icons">unfold_more</i>
+					</a>
+				</div>
+			</div>
+			<div class="project-tile">
+				<img src="./src/images/musicalkeys.png">
+				<div class="project-links">
+					<a href="#" class="project-link">
+						<i class="material-icons">link</i>
+					</a>
+					<a href="#" class="project-link">
+						<i class="material-icons">unfold_more</i>
+					</a>
+				</div>
+			</div>
+			<div class="project-tile">
+				<img src="./src/images/memory.png">
+				<div class="project-links">
+					<a href="#" class="project-link">
+						<i class="material-icons">link</i>
+					</a>
+					<a href="#" class="project-link">
+						<i class="material-icons">unfold_more</i>
+					</a>
+				</div>
+			</div>
+			<div class="project-tile">
+				<img src="./src/images/foodie.png" class="project-tile-image">
+				<div class="project-links">
+					<a href="#" class="project-link">
+						<i class="material-icons">link</i>
+					</a>
+					<a href="#" class="project-link">
+						<i class="material-icons">unfold_more</i>
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="contact" id="contact">
 			
 		</section>
 	</main>
@@ -26,5 +118,6 @@
 			
 		</nav>
 	</footer>
+	<script type="text/javascript" src="build/js/main.js"></script>
 </body>
 </html>

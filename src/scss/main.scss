@@ -1,0 +1,113 @@
+// Global Styles
+$primary-dark: #0B0C10;
+$secondary-dark: #1F2833;
+$primary-gray: #C5C6C7;
+$primary-blue: #334480;
+$secondary-blue: #8C99C6;
+
+
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	margin: 0px;
+}
+
+a {
+	color: $primary-gray;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+// Main Navigation Styles
+
+.main-navigation {
+	display: flex;
+	height: 50px;
+	background: linear-gradient(to left, $primary-dark, $secondary-dark);
+	opacity: .95;
+}
+
+.main-navigation-links {
+	display: flex;
+	padding: 0px;
+}
+
+.nav-link {
+	list-style-type: none;
+	margin: 0px 10px;
+	color: $primary-gray;
+}
+
+.logo {
+	max-width: 50px;
+	margin-right: 40px;
+}
+
+// Main Jumbotron Styles
+
+.main-jumbotron-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, $primary-blue 0%, $secondary-blue 100%);
+    opacity: .9;
+}
+
+.jumbotron-heading {
+	font-size: 50px;
+	margin: 0px;
+	color: $primary-gray;
+}
+
+
+// Projects Container Styles
+
+.project-container {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.project-tile {
+	width: 250px;
+	height: 220px;
+	flex-grow: 1; 
+    padding: 10px;
+    box-shadow: 4px 5px 10px #e8e8e8;
+    position: relative;
+}
+
+.project-tile img {
+	width: 100%;
+	max-height: 100%;
+}
+
+.project-link {
+	position: absolute;
+	top: calc(50% - 40px);
+	left: calc(50% - 60px);
+}
+
+.project-link i {
+	font-size: 60px;
+}
+
+.project-links {
+	display: none;
+	background-color: $secondary-blue;
+	opacity: .5;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
